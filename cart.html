@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Review your Cara shopping cart."><title>Your Cart | Cara</title><link rel="stylesheet" href="style.css?v=2"></head>
+<body>
+  <header id="header"><a href="index.html" aria-label="Cara home"><img class="logo" src="img/logo.png" alt="Cara"></a><button id="menu-toggle" type="button" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">☰</button><nav aria-label="Main navigation"><ul id="navbar"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="blog.html">Blog</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a class="cart-link active" href="cart.html" aria-current="page">Cart <span class="cart-count" data-cart-count>0</span></a></li></ul></nav></header>
+  <main>
+    <section class="page-hero cart-hero"><div><h1>Your cart</h1><p>Review quantities and totals before checkout.</p></div></section>
+    <section class="section container">
+      <div class="cart-table-wrap"><table class="cart-table"><thead><tr><th>Remove</th><th>Product</th><th>Name</th><th>Price</th><th>Quantity</th><th>Subtotal</th></tr></thead><tbody id="cart-items"></tbody></table></div>
+      <div class="cart-summary"><div class="summary-card"><h2>Cart total</h2><div class="summary-line"><span>Subtotal</span><span data-subtotal>$0.00</span></div><div class="summary-line"><span>Discount</span><span data-discount>-$0.00</span></div><div class="summary-line"><span>Shipping</span><span>Free</span></div><form id="coupon-form" class="coupon-row"><input name="coupon" placeholder="Coupon code" aria-label="Coupon code"><button type="submit">Apply</button></form><p>Tip: use <strong>SAVE10</strong> for 10% off.</p><div class="summary-line total"><span>Total</span><span data-total>$0.00</span></div><a class="button" href="contact.html">Contact us to order</a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-grid"><div><img class="logo" src="img/logo.png" alt="Cara"><p>Comfortable fashion and friendly service for customers in Mogadishu and beyond.</p></div><div><h3>Shop</h3><ul class="footer-links"><li><a href="shop.html">All products</a></li><li><a href="shop.html">New arrivals</a></li><li><a href="cart.html">Your cart</a></li></ul></div><div><h3>Company</h3><ul class="footer-links"><li><a href="about.html">About us</a></li><li><a href="blog.html">Journal</a></li><li><a href="contact.html">Contact</a></li></ul></div><div><h3>Visit us</h3><p>420 Banadir Road, Mogadishu</p><p>+252 617 144 703</p><p>Saturday–Wednesday, 8:00–17:00</p><img class="payment-image" src="img/pay/pay.png" alt="Accepted payment methods"></div></div><p class="footer-bottom">&copy; 2026 Cara. All rights reserved.</p></footer>
+  <script src="script.js?v=2"></script>
+</body>
+</html>

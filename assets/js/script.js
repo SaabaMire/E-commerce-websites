@@ -98,6 +98,12 @@ function money(value) {
   return `$${value.toFixed(2)}`;
 }
 
+function resolveCartImage(image) {
+  if (/^(?:[a-z]+:|\/)/i.test(image)) return image;
+  const projectRelativePath = image.replace(/^(?:\.\.\/)+/, "");
+  return new URL(`../${projectRelativePath}`, document.baseURI).href;
+}
+
 function renderCart() {
   const tableBody = document.getElementById("cart-items");
   if (!tableBody) return;
@@ -109,7 +115,7 @@ function renderCart() {
     tableBody.innerHTML = cart.map((item) => `
       <tr>
         <td><button class="remove-item" type="button" data-remove="${item.id}" aria-label="Remove ${item.name}">Remove</button></td>
-        <td><img src="${item.image}" alt="${item.name}"></td>
+        <td><img src="${resolveCartImage(item.image)}" alt="${item.name}"></td>
         <td>${item.name}</td>
         <td>${money(item.price)}</td>
         <td><input type="number" min="1" value="${item.quantity}" data-cart-quantity="${item.id}" aria-label="Quantity for ${item.name}"></td>
